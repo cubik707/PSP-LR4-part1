@@ -12,8 +12,7 @@ public class Server {
     public static void main(String[] args) {
         int port = 8080; // Порт для соединения
         try (ServerSocket serverSocket = new ServerSocket(port)) {
-            InetAddress serverAddress = InetAddress.getLocalHost();
-            System.out.println("Сервер запущен на адресе " + serverAddress.getHostAddress() + " и порту " + port);
+            System.out.println("Сервер запущен на порту " + port);
             System.out.println("Сервер запущен и ожидает подключения...");
 
             // Ожидание подключения клиента
