@@ -27,6 +27,12 @@ public class Client {
                     return;
                 }
 
+                // Проверка на пустую строку или некорректный ввод
+                if (inputString.isEmpty() || !inputString.matches("[a-zA-Zа-яА-ЯёЁ]+")) {
+                    System.out.println("Некорректный ввод. Пожалуйста, введите строку, содержащую только буквы.");
+                    continue;
+                }
+
                 // Отправка строки на сервер
                 out.println(inputString);
 
